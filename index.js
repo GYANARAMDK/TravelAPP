@@ -1,6 +1,6 @@
 const express=require('express');
 const cookieParser = require('cookie-parser');
-
+const port = process.env.PORT || 4000;
 const app =express()
 const dotenv=require('dotenv')
 dotenv.config();
@@ -30,7 +30,7 @@ mongoose.connection.on("error", (err) => {
   });
 mongoose.connection.once("open",()=>{
     console.log("connected to db")
-    app.listen(3000,()=>{
+    app.listen(port,()=>{
         console.log("server is running");
     })
 })
