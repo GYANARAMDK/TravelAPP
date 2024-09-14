@@ -1,7 +1,7 @@
 const express=require('express');
 const cookieParser = require('cookie-parser');
 
-const PORT= process.env.PORT || 4000;
+const PORT= process.env.PORT || 10000;
 
 const app =express()
 const dotenv=require('dotenv')
